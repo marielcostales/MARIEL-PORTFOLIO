@@ -534,10 +534,13 @@ table tr:hover {
         margin-bottom: 20px;
     }
 
-    .contact-info {
-         width: 80%; /* Increase width on smaller screens */
-         margin-bottom: 20px
+    @media (max-width: 440px) {
+        .social-links i {
+            width: 2rem; /* Reduce the icon size */
+            height: 2rem; /* Reduce the icon size */
+            font-size: 1rem; /* Adjust the font size within the icon */
+        }
+    }
+    
 }
-}
-
 
