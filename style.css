@@ -533,6 +533,11 @@ table tr:hover {
         width: 80%; /* Increase width on smaller screens */
         margin-bottom: 20px;
     }
+
+    .contact-info {
+         width: 80%; /* Increase width on smaller screens */
+         margin-bottom: 20px
+}
 }
 
 
