@@ -1,12 +1,12 @@
-function showDropdown() {
-    document.getElementById("dropdown").classList.add("active");
+function hamburg(){
+    const navbar = document.querySelector(".dropdown")
+    navbar.style.transform = "translateY(0px)"
 }
 
-function hideDropdown() {
-    document.getElementById("dropdown").classList.remove("active");
+function cancel(){
+    const navbar = document.querySelector(".dropdown")
+    navbar.style.transform = "translateY(-500px)"
 }
-
-
 // Typewriter Effect
 
 const texts = [
