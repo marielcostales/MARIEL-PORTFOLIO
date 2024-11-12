@@ -16,8 +16,12 @@ body{
 
 nav{
     width: 100%;
-    height: 7vh;
+    height: 5vh;
     position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+   
 }
 
 .nav-container{
@@ -31,7 +35,7 @@ nav{
 
 .logo{
     color: white;
-    font-size: 1.0rem;
+    font-size: 0.5rem;
     font-weight: bold;
 }
 
@@ -44,11 +48,11 @@ nav{
 .cancel{
     cursor: pointer;
     position: absolute;
-    right: 15px;
-    top: 10px;
+    right: 5px;
+    top: 5px;
     color: white;
     display: none;
-    font-size: 1.0rem;
+    font-size: 0.8rem;
 }
 
 .nav-container .links{
@@ -57,11 +61,11 @@ nav{
 
 .nav-container .links a{
     position: relative;
-    font-size: 1.0rem;
+    font-size: 0.5rem;
     color: white;
     margin: 0 20px;
     text-decoration: none;
-    font-weight: 400;
+    font-weight: 200;
     transition: 0.3s linear;
 }
 
@@ -195,7 +199,7 @@ section{
     flex-direction: column; 
     justify-content: center;
     align-items: center; 
-    padding: 40px 0; 
+    padding: 30px 0; 
     width: 90%; 
     max-width: 850px; 
     margin: 20px auto; 
@@ -204,9 +208,8 @@ section{
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
     background-color: #1a1a1a; 
     color: white;
-    margin-top:100px;
-    margin-right: 40px;
-    margin-left: 30px;
+    margin-top:50px;
+   
 }
 
 .social-links {
@@ -322,7 +325,7 @@ section{
     flex-direction: column;
     justify-content: center;
     align-items: center; 
-    padding: 50px; 
+    padding: 40px; 
     width: 90%; 
     max-width: 850px; 
     margin: 20px auto; 
@@ -331,8 +334,8 @@ section{
     box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
     background-color: #1a1a1a;
     border: 5px solid magenta; 
-    margin-bottom: 100px;
-    margin-left: 25px;
+    margin-bottom: 10px;
+   
 }
 
 
@@ -418,7 +421,6 @@ table tr:hover {
     box-sizing: border-box;
     border-radius: 4px;
     margin-bottom: 100px;
-    margin-left: 25px;
     transition: background-color 0.3s ease;
 
 }
@@ -427,7 +429,6 @@ table tr:hover {
     display: flex;
     justify-content: center;
     margin-top: 10px;
-    margin-left: 2px;
     border: 2px solid magenta; 
     padding: 10px; 
     box-sizing: border-box;
@@ -460,31 +461,32 @@ table tr:hover {
 #projects {
     background-color: #1a1a1a;
     color: magenta;
-    padding: 40px 0;
+    padding: 50px 0;
     border: 4px solid magenta;
     box-sizing: border-box;
     border-radius: 8px;
     margin-bottom: 100px;
     text-align: center;
-    margin-left: 30px;
-
+   
 }
 
 .projects-container {
     display: flex;
     justify-content: center;
     gap: 20px; 
-    margin-top: 100px;
+    margin-top: 50px;
+    flex-wrap: wrap;
 }
 
 .project-item {
     background-color: #333;
     border-radius: 8px;
-    padding: 20px;
-    width: 30%; 
+    padding: 5px;
+    width: 50%; 
     box-sizing: border-box;
     border: 2px solid magenta;
     transition: transform 0.3s ease-in-out;
+    margin-bottom: 30px;
 }
 
 .project-item:hover {
@@ -492,27 +494,27 @@ table tr:hover {
 }
 
 .project-item img {
-    width: 100%;
-    height: auto;
+    width: 20%;
+    height: 20%;
     border-radius: 8px;
     margin-bottom: 15px;
 }
 
 .project-item h3 {
-    font-size: 20px;
+    font-size: 8px;
     color: magenta;
     margin-bottom: 10px;
 }
 
 .project-item p {
-    font-size: 14px;
+    font-size: 5px;
     color: white;
     margin-bottom: 10px;
 }
 
 .project-link {
     display: inline-block;
-    padding: 8px 16px;
+    padding: 4px 8px;
     background-color: magenta;
     color: white;
     text-decoration: none;
@@ -521,57 +523,53 @@ table tr:hover {
 }
 
 
-
-
-@media (max-width: 768px) {
+@media (max-width: 800px) {
     .projects-container {
         flex-direction: column;
         align-items: center;
     }
 
     .project-item {
-        width: 80%; 
+        width: 50%; 
         margin-bottom: 20px;
     }
 
-    @media (max-width: 768px) {
-        .social-links i {
-            width: 2.5rem; 
-            height: 2.5rem;
-            font-size: 1.2rem;
-        }
-    
-        table th, table td {
-            font-size: 14px; 
-            padding: 10px; 
-        }
+    .social-links i {
+        width: 2rem;
+        height: 2rem;
+        font-size: 1rem;
     }
     
-    @media (max-width: 600px) {
-        .social-links i {
-            width: 2rem;
-            height: 2rem;
-            font-size: 1rem;
-        }
-    
-        table th, table td {
-            font-size: 12px;
-            padding: 8px;
-        }
+    table th, table td {
+        font-size: 12px;
+        padding: 8px;
     }
-    
-    @media (max-width: 440px) {
-        .social-links i {
-            width: 1.8rem;
-            height: 1.8rem;
-            font-size: 0.9rem;
-        }
-    
-        table th, table td {
-            font-size: 10px;
-            padding: 6px;
-        }
-    }
-    
 }
 
+
+@media (max-width: 500px) {
+    .social-links i {
+        width: 2.5rem; 
+        height: 2.5rem;
+        font-size: 1.2rem;
+    }
+    
+    table th, table td {
+        font-size: 14px; 
+        padding: 10px; 
+    }
+}
+
+
+@media (max-width: 440px) {
+    .social-links i {
+        width: 1.8rem;
+        height: 1.8rem;
+        font-size: 0.9rem;
+    }
+    
+    table th, table td {
+        font-size: 10px;
+        padding: 6px;
+    }
+}
