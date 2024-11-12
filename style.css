@@ -50,7 +50,7 @@ nav{
     display: none;
     font-size: 1.0rem;
 }
-
+/* Basic styling for the links */
 .nav-container .links {
     display: flex;
 }
@@ -65,35 +65,25 @@ nav{
     transition: 0.3s linear;
 }
 
-.nav-container .links a::before {
-    position: absolute;
-    content: "";
-    bottom: -3px;
-    left: 0;
-    width: 0%;
-    height: 3px;
-    background-color: magenta;
-    transition: 0.2s linear;
-}
-
-.nav-container .links a:hover::before {
-    width: 100%;
-}
-
-.nav-container .links a:hover {
-    color: magenta;
-}
-
+/* Dropdown styling */
 .dropdown {
     z-index: 100;
     position: absolute;
     top: 0;
-    transform: translateY(-500px);
     width: 100%;
     height: auto;
     backdrop-filter: blur(4px) brightness(40%);
     box-shadow: 0 0 20px black;
-    transition: 0.2s linear;
+    transition: transform 0.3s ease;
+    transform: translateY(-500px); /* Hide by default */
+    opacity: 0;
+    pointer-events: none;
+}
+
+.dropdown.active {
+    transform: translateY(0); /* Show when active */
+    opacity: 1;
+    pointer-events: auto;
 }
 
 .dropdown .links a {
@@ -108,6 +98,14 @@ nav{
 
 .dropdown .links a:hover {
     background-color: magenta;
+}
+
+.hamburg {
+    cursor: pointer;
+}
+
+.cancel {
+    cursor: pointer;
 }
 
 section {
