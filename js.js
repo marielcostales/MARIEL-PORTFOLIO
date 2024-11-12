@@ -1,12 +1,11 @@
-function hamburg(){
-    const navbar = document.querySelector(".dropdown")
-    navbar.style.transform = "translateY(0px)"
+function showDropdown() {
+    document.getElementById("dropdown").classList.add("active");
 }
 
-function cancel(){
-    const navbar = document.querySelector(".dropdown")
-    navbar.style.transform = "translateY(-500px)"
+function hideDropdown() {
+    document.getElementById("dropdown").classList.remove("active");
 }
+
 
 // Typewriter Effect
 
