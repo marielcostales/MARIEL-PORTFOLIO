@@ -14,13 +14,18 @@ body{
     
 }
 
-nav{
+/* Main Navbar */
+nav {
     width: 100%;
     height: 7vh;
     position: sticky;
+    top: 0; /* Necessary for sticky positioning */
+    background-color: #333; /* Optional: Add a background color for visibility */
+    z-index: 1000;
 }
 
-.nav-container{
+/* Navbar Container */
+.nav-container {
     width: 100%;
     height: 100%;
     display: flex;
@@ -29,28 +34,19 @@ nav{
     padding-left: 16px;
 }
 
-.logo{
+/* Logo Styling */
+.logo {
     color: white;
     font-size: 1.0rem;
     font-weight: bold;
 }
 
-.logo span{
+.logo span {
     color: white;
     text-shadow: 0 0 10px magenta;
 }
 
-.hamburg,
-.cancel{
-    cursor: pointer;
-    position: absolute;
-    right: 15px;
-    top: 10px;
-    color: white;
-    display: none;
-    font-size: 1.0rem;
-}
-/* Basic styling for the links */
+/* Links Styling */
 .nav-container .links {
     display: flex;
 }
@@ -62,61 +58,64 @@ nav{
     margin: 0 20px;
     text-decoration: none;
     font-weight: 400;
-    transition: 0.3s linear;
+    transition: color 0.3s linear;
 }
 
-/* Dropdown styling */
+/* Dropdown Menu */
 .dropdown {
-    z-index: 100;
     position: absolute;
-    top: 0;
+    top: 7vh; /* Adjust to match nav height */
     width: 100%;
-    height: auto;
-    backdrop-filter: blur(4px) brightness(40%);
+    background-color: rgba(0, 0, 0, 0.8);
+    display: none; /* Hide by default */
     box-shadow: 0 0 20px black;
-    transition: transform 0.3s ease;
-    transform: translateY(-500px); /* Hide by default */
-    opacity: 0;
-    pointer-events: none;
 }
 
 .dropdown.active {
-    transform: translateY(0); /* Show when active */
-    opacity: 1;
-    pointer-events: auto;
+    display: block; /* Show dropdown when active */
 }
 
 .dropdown .links a {
-    display: flex;
+    display: block;
     color: white;
     text-decoration: none;
-    justify-content: center;
+    text-align: center;
     padding: 15px 0;
-    align-items: center;
-    transition: 0.2s linear;
+    transition: background-color 0.2s linear;
 }
 
 .dropdown .links a:hover {
     background-color: magenta;
 }
 
+/* Icons */
 .hamburg {
     cursor: pointer;
+    color: white;
+    font-size: 1.5rem;
+    display: inline-block; /* Show by default */
 }
 
 .cancel {
     cursor: pointer;
+    color: white;
+    font-size: 1.5rem;
+    display: none; /* Hidden by default */
 }
 
-section {
-    width: 100%;
-    height: 90vh;
+.dropdown.active ~ .cancel {
+    display: inline-block; /* Show cancel when dropdown is active */
 }
+
+.dropdown.active ~ .hamburg {
+    display: none; /* Hide hamburger when dropdown is active */
+}
+
 
 
 .main-container{
-    width: 100%;
-    height: 80vh;
+    width: 150%;
+    height: 70vh;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
